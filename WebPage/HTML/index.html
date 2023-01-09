@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Playlists</title>
+</head>
+<body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src = "start.js"></script>
+
+<form action="javascript:searchSong()">
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search">
+    <button type="submit" onsubmit="searchSong();">Find</button>
+</form><br><br>
+
+<table border="3" id="songTable">
+    <thead>
+    <tr>
+        <th>&nbsp; &nbsp; &nbsp; &nbsp;</th>
+        <th>&nbsp;Artist&nbsp;</th>
+        <th>&nbsp;Song&nbsp;</th>
+        <th>&nbsp;Album&nbsp;</th>
+        <th>&nbsp;Length&nbsp;</th>
+    </tr>
+    </thead>
+</table><br><br>
+
+<form method="post" action="javascript:addPlaylist()">
+    <label for="create">Playlist Name</label>
+    <input type="text" id = "create" name="create">
+    <button type="submit" onsubmit="addPlaylist()">Create</button>
+</form><br><br>
+
+<data id="Succes"></data><br><br>
+<a target="_blank" href="playlist.html">Show Playlists</a>
+
+
+</body>
+</html>
